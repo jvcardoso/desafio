@@ -15,6 +15,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,13 +37,15 @@ public class Aluno {
     private Long id;
 
     @Column(name = "nome", nullable = false)
+    @NotBlank(message = "O nome do Aluno deve ser informado")
     private String nome;
 
     @Column(name = "email")
+    @Email(message = "O email informado deve ser válido")
     private String email;
 
     @CreatedDate    
-    @Column(name = "data_cadastro", updatable = false)
+    @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
     @ToString.Exclude

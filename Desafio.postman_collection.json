@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "5f2f6b12-b571-4e97-bf2c-737db2a99370",
+		"name": "Desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2742238",
+		"_collection_link": "https://crimson-astronaut-471307.postman.co/workspace/Juliano~f2566108-c284-4faf-bb4c-0fb570dbd275/collection/2742238-5f2f6b12-b571-4e97-bf2c-737db2a99370?action=share&source=collection_link&creator=2742238"
+	},
+	"item": [
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Cadastro de Aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Maguila dos Santos 2\",\r\n  \"email\": \"mag@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos Aluno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "Cadastro de Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Curso de Sommelier 2\",\r\n  \"descricao\": \"Degustador de vinhos !\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inscricao",
+			"item": [
+				{
+					"name": "Inscrever Aluno em Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"alunoId\": 1,\r\n  \"cursoId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/inscricoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inscricoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Cursos do Aluno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/inscricoes/aluno/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inscricoes",
+								"aluno",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Alunos do Curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/inscricoes/curso/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inscricoes",
+								"curso",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
